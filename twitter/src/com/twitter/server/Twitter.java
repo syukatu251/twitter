@@ -112,11 +112,8 @@ public class Twitter {
 				+ URLEncoder.encode(oAuthAccessTokenSecret, "UTF-8");
 
 	    String oAuthSignature =  computeSignature(signatureBaseString, compositeKey);
-	    System.out.println("oAuthSignature       : "+oAuthSignature);
-
 	    String oAuthSignatureEncoded = URLEncoder.encode(oAuthSignature, "UTF-8");
-	    System.out.println("oAuthSignatureEncoded: "+oAuthSignatureEncoded);
-
+	    
 	    String authorizationHeaderValueTempl = 
 	    		"OAuth oauth_consumer_key=\"%s\", oauth_nonce=\"%s\", oauth_signature=\"%s\", " + 
 	    		"oauth_signature_method=\"%s\", oauth_timestamp=\"%s\", oauth_token=\"%s\", oauth_version=\"%s\"";

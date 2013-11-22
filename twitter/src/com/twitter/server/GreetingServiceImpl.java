@@ -16,9 +16,8 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 		GreetingService {
 
 	public String greetServer(String input) throws InvalidKeyException, NoSuchAlgorithmException, MalformedURLException, IOException {
-		return input;
-/*		Twitter twitter = new Twitter();
-		return twitter.getUsersShow(input);*/
+		Twitter twitter = new Twitter();
+		return twitter.getUsersShow(input);
 	}   
 
 }
